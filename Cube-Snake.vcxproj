@@ -160,6 +160,10 @@
   <ItemGroup>
     <Text Include="Res\values.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\freeglut.dll" />
+    <None Include="x64\Debug\freeglut.dll" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

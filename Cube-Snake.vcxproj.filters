@@ -22,6 +22,9 @@
     <Filter Include="Resource Files\lib\x86">
       <UniqueIdentifier>{e4f659a3-8466-435b-9399-7499b2a42581}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\dlls">
+      <UniqueIdentifier>{247d44b9-eb5b-43a9-84f5-a70009c4d0fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cube-Snake.cpp">
@@ -48,5 +51,13 @@
     <Text Include="Res\values.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x64\Debug\freeglut.dll">
+      <Filter>Resource Files\dlls</Filter>
+    </None>
+    <None Include="Debug\freeglut.dll">
+      <Filter>Resource Files\dlls</Filter>
+    </None>
   </ItemGroup>
 </Project>
