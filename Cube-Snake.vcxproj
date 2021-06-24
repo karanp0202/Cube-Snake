@@ -161,8 +161,18 @@
     <Text Include="Res\values.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Debug\freeglut.dll" />
-    <None Include="x64\Debug\freeglut.dll" />
+    <None Include="Debug\freeglut.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Release\freeglut.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="x64\Debug\freeglut.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="x64\Release\freeglut.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

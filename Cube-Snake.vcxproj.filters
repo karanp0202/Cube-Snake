@@ -59,5 +59,11 @@
     <None Include="Debug\freeglut.dll">
       <Filter>Resource Files\dlls</Filter>
     </None>
+    <None Include="Release\freeglut.dll">
+      <Filter>Resource Files\dlls</Filter>
+    </None>
+    <None Include="x64\Release\freeglut.dll">
+      <Filter>Resource Files\dlls</Filter>
+    </None>
   </ItemGroup>
 </Project>
