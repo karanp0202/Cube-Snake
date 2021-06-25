@@ -12,12 +12,17 @@ getColors::getColors(const char* colorfile)
 	for (char buff = NULL; buff != '^'; fscanf(file, "%c", &buff)) {
 		switch (buff) {
 		case 'b':
-			fscanf(file, "%d", &n);
-			data.bg = new float[n];
-			for (int i = 0; i < n; i++) {
-				float tmp;
-				fscanf(file, "%f", &tmp);
-				*(data.bg + i) = tmp;
+			fscanf(file, "%c", &buff);
+			switch (buff) {
+			case 'g':
+				fscanf(file, "%d", &n);
+				data.bg = new float[n];
+				for (int i = 0; i < n; i++) {
+					float tmp;
+					fscanf(file, "%f", &tmp);
+					*(data.bg + i) = tmp;
+				}
+
 			}
 		}
 	}

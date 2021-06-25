@@ -5,14 +5,16 @@ getColors color("./Res/values.txt");
 
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
+	glLoadIdentity();
 
-	glRotatef(1.0f, 0, 0, 1);
+	glTranslatef(0.0f, 0.0f, -50.0f);
+
 	glColor4fv(color.data.bg);
 
 	glBegin(GL_TRIANGLES); {
 		glVertex3f(0.0, 0.0, -5.0);
-		glVertex3f(1.0, 0.0, -5.0);
-		glVertex3f(0.0, 1.0, -5.0);
+		glVertex3f(10.0, 0.0, -5.0);
+		glVertex3f(0.0, 10.0, -5.0);
 	}glEnd();
 
 	glutSwapBuffers();
