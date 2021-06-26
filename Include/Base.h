@@ -1,4 +1,5 @@
 #pragma once
+#include "../Include/getCoords.h"
 #include "../Include/Colors.h"
 #include <GL/glut.h>
 #include <thread>
@@ -10,3 +11,4 @@ extern void getValues();
 
 extern POINT w;
 extern getColors color;
+extern getCoords coord;

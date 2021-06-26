@@ -48,6 +48,9 @@
     <ClCompile Include="Src\GLres.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Src\getCoords.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\libx64\freeglut.lib">
@@ -75,6 +78,9 @@
     </ClInclude>
     <ClInclude Include="Libraries\Include\GL\glut.h">
       <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\getCoords.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

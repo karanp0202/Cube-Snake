@@ -5,8 +5,7 @@ struct Colors {
 	GLfloat* bg;
 };
 
-class getColors
-{
+class getColors {
 public:
 	void get(const char*);
 	Colors data;
