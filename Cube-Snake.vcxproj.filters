@@ -27,10 +27,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cube-Snake.cpp">
+    <ClCompile Include="Src\Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="getColors.cpp">
+    <ClCompile Include="Src\Colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GLsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GLbuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,12 +52,15 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="getColors.h">
+    <ClInclude Include="Include\Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Colors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Res\values.txt">
+    <Text Include="Res\colors.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

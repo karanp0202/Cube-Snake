@@ -1,25 +1,27 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <iostream>
-#include "getColors.h"
+#include "../Include/Base.h"
 
-getColors::getColors(const char* colorfile)
+void getColors::get(const char* colorfile)
 {
 	FILE* file = fopen(colorfile, "r");
+	if (file == NULL) {
+		ExitProcess(EXIT_FAILURE);
+	}
 
 	int n;
-	for (char buff = NULL; buff != '^'; fscanf(file, "%c", &buff)) {
+	for (char buff = NULL; buff != '^'; (void)fscanf(file, "%c", &buff)) {
 		switch (buff) {
 		case 'b':
-			fscanf(file, "%c", &buff);
+			(void)fscanf(file, "%c", &buff);
 			switch (buff) {
 			case 'g':
-				fscanf(file, "%d", &n);
+				(void)fscanf(file, "%d", &n);
 				data.bg = new float[n];
 				for (int i = 0; i < n; i++) {
 					float tmp;
-					fscanf(file, "%f", &tmp);
+					(void)fscanf(file, "%f", &tmp);
 					*(data.bg + i) = tmp;
 				}
 

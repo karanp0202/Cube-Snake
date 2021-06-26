@@ -8,7 +8,7 @@ struct Colors {
 class getColors
 {
 public:
-	getColors(const char*);
+	void get(const char*);
 	Colors data;
 };
 
