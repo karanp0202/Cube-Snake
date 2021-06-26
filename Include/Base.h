@@ -6,3 +6,7 @@
 extern void display();
 extern void GLsetup();
 extern void timer(int);
+extern void getValues();
+
+extern POINT w;
+extern getColors color;

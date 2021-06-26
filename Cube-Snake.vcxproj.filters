@@ -25,6 +25,9 @@
     <Filter Include="Resource Files\dlls">
       <UniqueIdentifier>{247d44b9-eb5b-43a9-84f5-a70009c4d0fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GL">
+      <UniqueIdentifier>{4ce892d1-7137-44e9-9aa5-0ee760c3f2da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Display.cpp">
@@ -40,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Src\GLbuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GLres.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -58,9 +64,21 @@
     <ClInclude Include="Include\Colors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Libraries\Include\GL\freeglut.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Include\GL\freeglut_ext.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Include\GL\freeglut_std.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Include\GL\glut.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Res\colors.txt">
+    <Text Include="Res\colors.dat">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

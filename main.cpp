@@ -1,14 +1,10 @@
 #include "./Include/Base.h"
 
-getColors color;
-
-void getColor() {
-	color.get("./Res/colors.txt");
-};
+POINT w;
 
 int main(int argc, char* argv[]) {
 
-	std::thread values(getColor);
+	std::thread values(getValues);
 
 	glutInit(&argc, argv);
 	GLsetup();

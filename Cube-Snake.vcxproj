@@ -151,6 +151,7 @@
     <ClCompile Include="Src\Display.cpp" />
     <ClCompile Include="Src\Colors.cpp" />
     <ClCompile Include="Src\GLbuffer.cpp" />
+    <ClCompile Include="Src\GLres.cpp" />
     <ClCompile Include="Src\GLsetup.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,9 +161,13 @@
   <ItemGroup>
     <ClInclude Include="Include\Base.h" />
     <ClInclude Include="Include\Colors.h" />
+    <ClInclude Include="Libraries\Include\GL\freeglut.h" />
+    <ClInclude Include="Libraries\Include\GL\freeglut_ext.h" />
+    <ClInclude Include="Libraries\Include\GL\freeglut_std.h" />
+    <ClInclude Include="Libraries\Include\GL\glut.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Res\colors.txt" />
+    <Text Include="Res\colors.dat" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Debug\freeglut.dll">
