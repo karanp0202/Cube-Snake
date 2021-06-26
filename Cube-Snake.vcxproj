@@ -160,13 +160,13 @@
     <Library Include="Libraries\lib\libx86\freeglut.lib" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\Base.h" />
-    <ClInclude Include="Include\Colors.h" />
-    <ClInclude Include="Include\getCoords.h" />
-    <ClInclude Include="Libraries\Include\GL\freeglut.h" />
-    <ClInclude Include="Libraries\Include\GL\freeglut_ext.h" />
-    <ClInclude Include="Libraries\Include\GL\freeglut_std.h" />
-    <ClInclude Include="Libraries\Include\GL\glut.h" />
+    <ClInclude Include="Include\Base.hxx" />
+    <ClInclude Include="Include\Colors.hxx" />
+    <ClInclude Include="Include\getCoords.hxx" />
+    <ClInclude Include="Libraries\Include\GL\freeglut.hxx" />
+    <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx" />
+    <ClInclude Include="Libraries\Include\GL\freeglut_std.hxx" />
+    <ClInclude Include="Libraries\Include\GL\glut.hxx" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Res\colors.dat" />

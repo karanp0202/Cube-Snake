@@ -1,4 +1,4 @@
-#include "../Include/Base.h"
+#include "../Include/Base.hxx"
 
 void GLsetup() {
 	w.x = GetSystemMetrics(SM_CXSCREEN);

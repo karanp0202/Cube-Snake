@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include "../Include/Base.h"
+#include "../Include/Base.hxx"
 
 void getCoords::get(const char* coordsfile){
 	FILE* file = fopen(coordsfile, "r");

@@ -61,25 +61,25 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\Base.h">
+    <ClInclude Include="Include\Base.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\Colors.h">
+    <ClInclude Include="Include\Colors.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Libraries\Include\GL\freeglut.h">
+    <ClInclude Include="Libraries\Include\GL\freeglut.hxx">
       <Filter>Header Files\GL</Filter>
     </ClInclude>
-    <ClInclude Include="Libraries\Include\GL\freeglut_ext.h">
+    <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx">
       <Filter>Header Files\GL</Filter>
     </ClInclude>
-    <ClInclude Include="Libraries\Include\GL\freeglut_std.h">
+    <ClInclude Include="Libraries\Include\GL\freeglut_std.hxx">
       <Filter>Header Files\GL</Filter>
     </ClInclude>
-    <ClInclude Include="Libraries\Include\GL\glut.h">
+    <ClInclude Include="Libraries\Include\GL\glut.hxx">
       <Filter>Header Files\GL</Filter>
     </ClInclude>
-    <ClInclude Include="Include\getCoords.h">
+    <ClInclude Include="Include\getCoords.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

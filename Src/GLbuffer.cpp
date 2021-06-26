@@ -1,4 +1,4 @@
-#include "../Include/Base.h"
+#include "../Include/Base.hxx"
 
 void timer(int) {
 	glutTimerFunc(0, timer, 0);

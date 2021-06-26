@@ -1,5 +1,5 @@
 #pragma once
-#include <GL/glut.h>
+#include <GL/glut.hxx>
 
 struct Colors {
 	GLfloat* bg;
@@ -10,4 +10,3 @@ public:
 	void get(const char*);
 	Colors data;
 };
-
