@@ -17,5 +17,13 @@ void display() {
 		glVertex3f(-200.0f, 65.0f, -100.0f);
 	}glEnd();
 
+	glColor3f(1, 1, 1);
+	glBegin(GL_QUADS); {
+		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
+		glVertex3f( coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
+		glVertex3f( coord.data.size.x,  coord.data.size.y, -coord.data.size.z);
+		glVertex3f(-coord.data.size.x,  coord.data.size.y, -coord.data.size.z);
+	}glEnd();
+
 	glutSwapBuffers();
 }
