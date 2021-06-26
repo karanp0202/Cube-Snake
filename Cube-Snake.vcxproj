@@ -149,7 +149,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Src\Display.cpp" />
-    <ClCompile Include="Src\Colors.cpp" />
+    <ClCompile Include="Src\getColors.cpp" />
     <ClCompile Include="Src\getCoords.cpp" />
     <ClCompile Include="Src\GLbuffer.cpp" />
     <ClCompile Include="Src\GLres.cpp" />
@@ -161,7 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Base.hxx" />
-    <ClInclude Include="Include\Colors.hxx" />
+    <ClInclude Include="Include\getColors.hxx" />
     <ClInclude Include="Include\getCoords.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx" />
@@ -178,6 +178,7 @@
     <None Include="Release\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>
+    <None Include="Res\coords.dat" />
     <None Include="x64\Debug\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>

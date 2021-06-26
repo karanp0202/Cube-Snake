@@ -6,7 +6,7 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 
-	glTranslatef(0.0f, 0.0f, -50.0f);
+	glTranslatef(coord.data.cam.x, coord.data.cam.y, coord.data.cam.z);
 
 	// BACKGROUND
 	glColor4fv(color.data.bg);

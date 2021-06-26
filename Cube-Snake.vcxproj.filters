@@ -33,7 +33,7 @@
     <ClCompile Include="Src\Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Colors.cpp">
+    <ClCompile Include="Src\getColors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -64,7 +64,7 @@
     <ClInclude Include="Include\Base.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\Colors.hxx">
+    <ClInclude Include="Include\getColors.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\Include\GL\freeglut.hxx">
@@ -100,6 +100,9 @@
     </None>
     <None Include="x64\Release\freeglut.dll">
       <Filter>Resource Files\dlls</Filter>
+    </None>
+    <None Include="Res\coords.dat">
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

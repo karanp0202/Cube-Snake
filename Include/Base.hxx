@@ -1,6 +1,6 @@
 #pragma once
 #include "../Include/getCoords.hxx"
-#include "../Include/Colors.hxx"
+#include "../Include/getColors.hxx"
 #include <GL/glut.hxx>
 #include <thread>
 
