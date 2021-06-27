@@ -6,6 +6,7 @@ struct Vec3 {
 
 struct Coords {
 	Vec3 origin;
+	Vec3 angle;
 	Vec3 cam;
 	Vec3 size;
 	Vec3 snake;

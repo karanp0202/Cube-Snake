@@ -17,6 +17,10 @@ void display() {
 		glVertex3f(-200.0f, 65.0f, -100.0f);
 	}glEnd();
 
+	glRotatef(coord.data.angle.x, 1, 0, 0);
+	glRotatef(coord.data.angle.y, 0, 1, 0);
+	glRotatef(coord.data.angle.z, 0, 0, 1);
+
 	/*static float a = 0;
 	glRotatef(a+=0.2, 1, 0, 0);
 	glRotatef(a+=0.2, 0, 1, 0);
@@ -24,37 +28,37 @@ void display() {
 
 	// BASE CUBE RENDER
 	glBegin(GL_QUADS); {
-		glColor4fv(color.data.c1);
+		glColor4fv(color.data.c0);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(coord.data.size.x, coord.data.size.y, coord.data.size.z);
 		glVertex3f(-coord.data.size.x, coord.data.size.y, coord.data.size.z);
 
-		glColor4fv(color.data.c2);
+		glColor4fv(color.data.c1);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(-coord.data.size.x, coord.data.size.y, -coord.data.size.z);
 		glVertex3f(coord.data.size.x, coord.data.size.y, -coord.data.size.z);
 
-		glColor4fv(color.data.c3);
+		glColor4fv(color.data.c2);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(coord.data.size.x, coord.data.size.y, -coord.data.size.z);
 		glVertex3f(coord.data.size.x, coord.data.size.y, coord.data.size.z);
 
-		glColor4fv(color.data.c4);
+		glColor4fv(color.data.c3);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(-coord.data.size.x, coord.data.size.y, coord.data.size.z);
+		glVertex3f(-coord.data.size.x, coord.data.size.y, -coord.data.size.z);
+
+		glColor4fv(color.data.c4);
+		glVertex3f(-coord.data.size.x, coord.data.size.y, coord.data.size.z);
+		glVertex3f(coord.data.size.x, coord.data.size.y, coord.data.size.z);
+		glVertex3f(coord.data.size.x, coord.data.size.y, -coord.data.size.z);
 		glVertex3f(-coord.data.size.x, coord.data.size.y, -coord.data.size.z);
 
 		glColor4fv(color.data.c5);
-		glVertex3f(-coord.data.size.x, coord.data.size.y, coord.data.size.z);
-		glVertex3f(coord.data.size.x, coord.data.size.y, coord.data.size.z);
-		glVertex3f(coord.data.size.x, coord.data.size.y, -coord.data.size.z);
-		glVertex3f(-coord.data.size.x, coord.data.size.y, -coord.data.size.z);
-
-		glColor4fv(color.data.c6);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);

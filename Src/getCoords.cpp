@@ -23,6 +23,9 @@ void getCoords::get(const char* coordsfile){
 			case 'n':
 				(void)fscanf(file, "%f %f %f", &data.snake.x, &data.snake.y, &data.snake.z);
 				break;
+			case 'a':
+				(void)fscanf(file, "%f %f %f", &data.angle.x, &data.angle.y, &data.angle.z);
+				break;
 			}
 		}
 	}

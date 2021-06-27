@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Src\Display.cpp" />
+    <ClCompile Include="Src\Frames.cpp" />
     <ClCompile Include="Src\getColors.cpp" />
     <ClCompile Include="Src\getCoords.cpp" />
     <ClCompile Include="Src\GLbuffer.cpp" />

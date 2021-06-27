@@ -57,6 +57,9 @@
     <ClCompile Include="Src\KeyBoard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Frames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\libx64\freeglut.lib">

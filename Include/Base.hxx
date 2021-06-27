@@ -11,8 +11,12 @@ extern void GLsetup();
 extern void timer(int);
 extern void getValues();
 extern void keyDown(unsigned char, int, int);
+extern void snakerefresh();
+extern void stretchFrame();
 
+extern int activeFrame;
 extern getColors color;
 extern getCoords coord;
 extern Snake mainsnake;
+extern float speed;
 extern POINT w;
