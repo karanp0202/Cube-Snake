@@ -51,6 +51,9 @@
     <ClCompile Include="Src\getCoords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Snake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\libx64\freeglut.lib">
@@ -80,6 +83,9 @@
       <Filter>Header Files\GL</Filter>
     </ClInclude>
     <ClInclude Include="Include\getCoords.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Snake.hxx">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

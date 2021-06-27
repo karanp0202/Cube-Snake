@@ -9,7 +9,6 @@ void getCoords::get(const char* coordsfile){
 		ExitProcess(EXIT_FAILURE);
 	}
 
-	int n;
 	for (char buff = NULL; buff != '^'; (void)fscanf(file, "%c", &buff)) {
 		switch (buff) {
 		case 'c':
@@ -20,6 +19,9 @@ void getCoords::get(const char* coordsfile){
 				break;
 			case 's':
 				(void)fscanf(file, "%f %f %f", &data.size.x, &data.size.y, &data.size.z);
+				break;
+			case 'n':
+				(void)fscanf(file, "%f %f %f", &data.snake.x, &data.snake.y, &data.snake.z);
 				break;
 			}
 		}

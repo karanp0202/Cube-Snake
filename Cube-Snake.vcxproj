@@ -154,6 +154,7 @@
     <ClCompile Include="Src\GLbuffer.cpp" />
     <ClCompile Include="Src\GLres.cpp" />
     <ClCompile Include="Src\GLsetup.cpp" />
+    <ClCompile Include="Src\Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\libx64\freeglut.lib" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Include\Base.hxx" />
     <ClInclude Include="Include\getColors.hxx" />
     <ClInclude Include="Include\getCoords.hxx" />
+    <ClInclude Include="Include\Snake.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_std.hxx" />

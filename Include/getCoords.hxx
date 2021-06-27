@@ -8,6 +8,7 @@ struct Coords {
 	Vec3 origin;
 	Vec3 cam;
 	Vec3 size;
+	Vec3 snake;
 };
 
 class getCoords {

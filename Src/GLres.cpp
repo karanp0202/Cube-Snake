@@ -2,6 +2,7 @@
 
 getColors color;
 getCoords coord;
+Snake mainsnake;
 
 void getValues() {
 	color.get("./Res/colors.dat");
