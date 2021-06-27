@@ -72,22 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\karan\source\repos\Cube-Snake\Libraries\lib\libx86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.Libraries\lib\libx86;$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\Users\karan\source\repos\Cube-Snake\Libraries\lib\libx86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.Libraries\lib\libx86;$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\karan\source\repos\Cube-Snake\Libraries\lib\libx64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.\Libraries\lib\libx64;$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\Users\karan\source\repos\Cube-Snake\Libraries\lib\libx64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.\Libraries\lib\libx64;$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
