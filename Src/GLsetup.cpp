@@ -1,5 +1,7 @@
 #include "../Include/Base.hxx"
 
+POINT w;
+
 void GLsetup() {
 	w.x = GetSystemMetrics(SM_CXSCREEN);
 	w.y = GetSystemMetrics(SM_CYSCREEN);

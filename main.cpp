@@ -1,7 +1,5 @@
 #include "./Include/Base.hxx"
 
-POINT w;
-
 int main(int argc, char* argv[]) {
 
 	std::thread values(getValues);

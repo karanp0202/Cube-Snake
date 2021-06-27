@@ -1,5 +1,5 @@
 #pragma once
-#include <GL/glut.hxx>
+#include "../Libraries/Include/GL/glut.hxx"
 
 struct Colors {
 	GLfloat* bg;

@@ -18,9 +18,9 @@ void display() {
 		glVertex3f(-200.0f, 65.0f, -100.0f);
 	}glEnd();
 
-	glRotatef(i+=0.2, 1, 0, 0);
-	glRotatef(i+=0.2, 0, 1, 0);
-	glRotatef(i+=0.2, 0, 0, 1);
+	glRotatef(i+=0.2f, 1, 0, 0);
+	glRotatef(i+=0.2f, 0, 1, 0);
+	glRotatef(i+=0.2f, 0, 0, 1);
 
 	glBegin(GL_QUADS);
 		glColor4fv(color.data.c1);

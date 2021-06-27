@@ -1,7 +1,7 @@
 #pragma once
+#include "../Libraries/Include/GL/glut.hxx"
 #include "../Include/getCoords.hxx"
 #include "../Include/getColors.hxx"
-#include <GL/glut.hxx>
 #include <thread>
 
 extern void display();
