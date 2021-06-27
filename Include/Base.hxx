@@ -10,6 +10,7 @@ extern void display();
 extern void GLsetup();
 extern void timer(int);
 extern void getValues();
+extern void keyDown(unsigned char, int, int);
 
 extern getColors color;
 extern getCoords coord;

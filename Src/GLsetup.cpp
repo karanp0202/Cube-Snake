@@ -13,6 +13,7 @@ void GLsetup() {
 
 	glutDisplayFunc(display);
 	glutTimerFunc(0, timer, 0);
+	glutKeyboardFunc(keyDown);
 
 	glViewport(0, 0, w.x/2, w.y/2);
 	glMatrixMode(GL_PROJECTION);

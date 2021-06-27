@@ -154,6 +154,7 @@
     <ClCompile Include="Src\GLbuffer.cpp" />
     <ClCompile Include="Src\GLres.cpp" />
     <ClCompile Include="Src\GLsetup.cpp" />
+    <ClCompile Include="Src\KeyBoard.cpp" />
     <ClCompile Include="Src\Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
