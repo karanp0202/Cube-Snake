@@ -9,8 +9,8 @@ void display() {
 	glTranslatef(coord.data.cam.x, coord.data.cam.y, coord.data.cam.z);
 
 	// BACKGROUND RENDER
-	glColor4fv(color.data.bg);
 	glBegin(GL_QUADS); {
+		glColor4fv(color.data.bg);
 		glVertex3f(-200.0f, -65.0f, -100.0f);
 		glVertex3f(200.0f, -65.0f, -100.0f);
 		glVertex3f(200.0f, 65.0f, -100.0f);
