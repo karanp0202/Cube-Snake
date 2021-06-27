@@ -175,6 +175,7 @@
     <None Include="Debug\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>
+    <None Include="index.html" />
     <None Include="Release\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>

@@ -28,6 +28,9 @@
     <Filter Include="Header Files\GL">
       <UniqueIdentifier>{4ce892d1-7137-44e9-9aa5-0ee760c3f2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Web">
+      <UniqueIdentifier>{9a3b817e-82c4-413e-9b51-47934469ffab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Display.cpp">
@@ -103,6 +106,9 @@
     </None>
     <None Include="Res\coords.dat">
       <Filter>Resource Files</Filter>
+    </None>
+    <None Include="index.html">
+      <Filter>Web</Filter>
     </None>
   </ItemGroup>
 </Project>
