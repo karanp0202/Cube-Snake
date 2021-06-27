@@ -4,7 +4,7 @@ void GLsetup() {
 	w.x = GetSystemMetrics(SM_CXSCREEN);
 	w.y = GetSystemMetrics(SM_CYSCREEN);
 
-	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
+	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowPosition(w.x/4, w.y/5);
 	glutInitWindowSize(w.x/2, w.y/2);
 	int window = glutCreateWindow("Cube Snake");
@@ -15,9 +15,10 @@ void GLsetup() {
 	glViewport(0, 0, w.x/2, w.y/2);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(30.0f, (GLfloat)w.x/(GLfloat)w.y, 0.1f, 151.0f);
+	gluPerspective(35.0f, (GLfloat)w.x/(GLfloat)w.y, 0.1f, 300.0f);
 	glMatrixMode(GL_MODELVIEW);
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_DEPTH_TEST);
 }
