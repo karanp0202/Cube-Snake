@@ -22,7 +22,7 @@ void display() {
 	glRotatef(i+=0.2f, 0, 1, 0);
 	glRotatef(i+=0.2f, 0, 0, 1);
 
-	glBegin(GL_QUADS);
+	glBegin(GL_QUADS); {
 		glColor4fv(color.data.c1);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, coord.data.size.z);
@@ -58,7 +58,7 @@ void display() {
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
-	glEnd();
+	}glEnd();
 
 	glutSwapBuffers();
 }
