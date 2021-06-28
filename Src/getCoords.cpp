@@ -29,6 +29,6 @@ void getCoords::get(const char* coordsfile){
 			}
 		}
 	}
-	
+	data.snake.z = data.size.z+1;
 	fclose(file);
 }

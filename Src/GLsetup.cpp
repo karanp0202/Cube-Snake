@@ -18,7 +18,7 @@ void GLsetup() {
 	glViewport(0, 0, w.x/2, w.y/2);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(35.0f, (GLfloat)w.x/(GLfloat)w.y, 0.1f, 300.0f);
+	gluPerspective(30.0f, (GLfloat)w.x/(GLfloat)w.y, 0.1f, 500.0f);
 	glMatrixMode(GL_MODELVIEW);
 
 	glEnable(GL_BLEND);

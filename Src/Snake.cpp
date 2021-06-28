@@ -132,5 +132,5 @@ void snakerefresh() {
 	coord.data.snake.y += mainsnake.Velocity.y;
 	coord.data.snake.z += mainsnake.Velocity.z;
 	snakeRoam();
-	stretchFrame();
+	setFrame();
 }

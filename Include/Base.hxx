@@ -12,7 +12,8 @@ extern void timer(int);
 extern void getValues();
 extern void keyDown(unsigned char, int, int);
 extern void snakerefresh();
-extern void stretchFrame();
+extern void setFrame();
+extern void rotateFrame();
 
 extern int activeFrame;
 extern getColors color;

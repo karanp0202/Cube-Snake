@@ -17,9 +17,7 @@ void display() {
 		glVertex3f(-200.0f, 65.0f, -100.0f);
 	}glEnd();
 
-	glRotatef(coord.data.angle.x, 1, 0, 0);
-	glRotatef(coord.data.angle.y, 0, 1, 0);
-	glRotatef(coord.data.angle.z, 0, 0, 1);
+	rotateFrame();
 
 	/*static float a = 0;
 	glRotatef(a+=0.2, 1, 0, 0);
