@@ -2,6 +2,6 @@
 
 void timer(int) {
 	snakerefresh();
-	glutTimerFunc(1000/60, timer, 0);
+	glutTimerFunc(16, timer, 0);
 	glutPostRedisplay();
 }

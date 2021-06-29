@@ -6,6 +6,8 @@ void Snake::changeVelocity(float x, float y, float z) {
 	Velocity.z = z;
 }
 
+std::vector<Vec3> Tail;
+
 void Snake::renderface() {
 	glBegin(GL_QUADS); {
 		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
@@ -37,6 +39,40 @@ void Snake::renderface() {
 		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
 		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
 		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
+	}glEnd();
+}
+
+void Snake::renderTail(int n) {
+	glBegin(GL_QUADS); {
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y + 1.0f, Tail[n].z - 1.0f);
+
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z + 1.0f);
+		glVertex3f(Tail[n].x - 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
+		glVertex3f(Tail[n].x + 1.0f, Tail[n].y - 1.0f, Tail[n].z - 1.0f);
 	}glEnd();
 }
 
@@ -127,10 +163,15 @@ void snakeRoam() {
 	}
 }
 
+void addtail() {
+	Tail.push_back({ coord.data.snake.x,coord.data.snake.y, coord.data.snake.z });
+}
+
 void snakerefresh() {
 	coord.data.snake.x += mainsnake.Velocity.x;
 	coord.data.snake.y += mainsnake.Velocity.y;
 	coord.data.snake.z += mainsnake.Velocity.z;
+	addtail();
 	snakeRoam();
 	setFrame();
 }

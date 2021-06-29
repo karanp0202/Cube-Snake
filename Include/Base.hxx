@@ -5,6 +5,7 @@
 #include "../Include/getColors.hxx"
 #include "../Include/Snake.hxx"
 #include <thread>
+#include <vector>
 
 extern void display();
 extern void GLsetup();
@@ -15,6 +16,7 @@ extern void snakerefresh();
 extern void setFrame();
 extern void rotateFrame();
 
+extern std::vector<Vec3> Tail;
 extern int activeFrame;
 extern getColors color;
 extern getCoords coord;

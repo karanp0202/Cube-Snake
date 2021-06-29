@@ -1,6 +1,6 @@
 #include "../Include/Base.hxx"
 
-float speed = 0.3f;
+float speed = mainsnake.Velocity.x;
 
 void keyDown(unsigned char key, int, int) {
 	if (activeFrame == 0 || activeFrame == 1 || activeFrame == 2 || activeFrame == 3) {

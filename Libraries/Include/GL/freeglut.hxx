@@ -14,8 +14,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include "freeglut_std.h"
-#include "freeglut_ext.h"
+#include "./freeglut_std.hxx"
+#include "./freeglut_ext.hxx"
 
 /*** END OF FILE ***/
 

@@ -10,7 +10,7 @@ void setFrame() {
 	normalizeFrame();
 	switch (activeFrame) {
 	case 0:
-		if(coord.data.angle.x >= 180.0f)coord.data.angle.x += (360.0f - coord.data.angle.x)/20.0f;
+		if (coord.data.angle.x >= 180.0f)coord.data.angle.x += (360.0f - coord.data.angle.x) / 20.0f;
 		else coord.data.angle.x -= coord.data.angle.x / 20.0f;
 		if (coord.data.angle.y >= 180.0f)coord.data.angle.y += (360.0f - coord.data.angle.y) / 20.0f;
 		else coord.data.angle.y -= coord.data.angle.y / 20.0f;
