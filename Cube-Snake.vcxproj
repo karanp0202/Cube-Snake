@@ -167,6 +167,7 @@
     <ClInclude Include="Include\getColors.hxx" />
     <ClInclude Include="Include\getCoords.hxx" />
     <ClInclude Include="Include\Snake.hxx" />
+    <ClInclude Include="Include\tailNode.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_std.hxx" />

@@ -9,6 +9,7 @@ struct XYZ {
 class Snake
 {
 public:
+	int score = 0;
 	XYZ Velocity;
 	void changeVelocity(float, float, float);
 	void renderface();

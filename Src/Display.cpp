@@ -67,8 +67,8 @@ void display() {
 	glColor4fv(color.data.sf);
 	mainsnake.renderface();
 
-	for (int i = 0; i < Tail.size(); i++) {
-		if(i % 10 == 0)mainsnake.renderTail(i);
+	for (unsigned int i = 0; i < Tail.size; i++) {
+		mainsnake.renderTail(i);
 	}
 
 	glutSwapBuffers();
