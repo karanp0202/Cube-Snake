@@ -27,3 +27,5 @@ extern Food mainfood;
 extern float speed;
 extern int score;
 extern POINT w;
+
+extern std::vector<Vec3> tail;

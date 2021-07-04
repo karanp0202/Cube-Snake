@@ -45,7 +45,7 @@ void Tail::render() {
 
 void Tail::addTail(int n) {
 	if (tail.size() == 0)tail.push_back(coord.data.snake);
-	for (int i = 0; i < n; i++)tail.push_back(tail[tail.size() - 1]);
+	for (int i = 0; i < n; i++)tail.push_back(Vec3());
 }
 
 void Tail::refreshtail() {
@@ -53,4 +53,14 @@ void Tail::refreshtail() {
 		tail[i] = tail[i - 1];
 	}
 	tail[0] = coord.data.snake;
+}
+
+void Tail::check() {
+	for (int i = 20; i < tail.size(); i++) {
+		if(i%10 == 0)if (coord.data.snake.x > tail[i].x - 2.0f && coord.data.snake.x < tail[i].x + 2.0f
+			&& coord.data.snake.y > tail[i].y - 2.0f && coord.data.snake.y < tail[i].y + 2.0f
+			&& coord.data.snake.z > tail[i].z - 2.0f && coord.data.snake.z < tail[i].z + 2.0f) {
+			exit(0);
+		}
+	}
 }

@@ -7,4 +7,5 @@ public:
 	void render();
 	void addTail(int);
 	void refreshtail();
+	void check();
 };

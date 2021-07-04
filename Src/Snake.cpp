@@ -133,6 +133,7 @@ void snakerefresh() {
 	coord.data.snake.z += mainsnake.Velocity.z;
 	maintail.refreshtail();
 	mainfood.check();
+	maintail.check();
 	snakeRoam();
 	setFrame();
 }

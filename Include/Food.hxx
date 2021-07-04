@@ -6,6 +6,5 @@ public:
 	void renderFood(int);
 	void render();
 	void addFood(int);
-	void refreshFood();
 	void check();
 };
