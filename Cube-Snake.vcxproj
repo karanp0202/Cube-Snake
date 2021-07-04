@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Src\Display.cpp" />
+    <ClCompile Include="Src\Food.cpp" />
     <ClCompile Include="Src\Frames.cpp" />
     <ClCompile Include="Src\getColors.cpp" />
     <ClCompile Include="Src\getCoords.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="Src\GLsetup.cpp" />
     <ClCompile Include="Src\KeyBoard.cpp" />
     <ClCompile Include="Src\Snake.cpp" />
+    <ClCompile Include="Src\Tail.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\libx64\freeglut.lib" />
@@ -164,9 +166,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Base.hxx" />
+    <ClInclude Include="Include\Food.hxx" />
     <ClInclude Include="Include\getColors.hxx" />
     <ClInclude Include="Include\getCoords.hxx" />
     <ClInclude Include="Include\Snake.hxx" />
+    <ClInclude Include="Include\Tail.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_ext.hxx" />
     <ClInclude Include="Libraries\Include\GL\freeglut_std.hxx" />

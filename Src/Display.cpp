@@ -2,29 +2,7 @@
 
 extern getColors color;
 
-void display() {
-	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
-	glLoadIdentity();
-
-	glTranslatef(coord.data.cam.x, coord.data.cam.y, coord.data.cam.z);
-
-	// BACKGROUND RENDER
-	glBegin(GL_QUADS); {
-		glColor4fv(color.data.bg);
-		glVertex3f(-200.0f, -65.0f, -100.0f);
-		glVertex3f(200.0f, -65.0f, -100.0f);
-		glVertex3f(200.0f, 65.0f, -100.0f);
-		glVertex3f(-200.0f, 65.0f, -100.0f);
-	}glEnd();
-
-	rotateFrame();
-
-	/*static float a = 0;
-	glRotatef(a+=0.2, 1, 0, 0);
-	glRotatef(a+=0.2, 0, 1, 0);
-	glRotatef(a+=0.2, 0, 0, 1);*/
-
-	// BASE CUBE RENDER
+void cube() {
 	glBegin(GL_QUADS); {
 		glColor4fv(color.data.c0);
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, coord.data.size.z);
@@ -62,15 +40,42 @@ void display() {
 		glVertex3f(-coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 		glVertex3f(coord.data.size.x, -coord.data.size.y, -coord.data.size.z);
 	}glEnd();
+}
+
+void display() {
+	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+	glLoadIdentity();
+
+	glTranslatef(coord.data.cam.x, coord.data.cam.y, coord.data.cam.z);
+
+	// BACKGROUND RENDER
+	glBegin(GL_QUADS); {
+		glColor4fv(color.data.bg);
+		glVertex3f(-200.0f, -65.0f, -100.0f);
+		glVertex3f(200.0f, -65.0f, -100.0f);
+		glVertex3f(200.0f, 65.0f, -100.0f);
+		glVertex3f(-200.0f, 65.0f, -100.0f);
+	}glEnd();
+
+	rotateFrame();
+
+	/*static float a = 0;
+	glRotatef(a+=0.2, 1, 0, 0);
+	glRotatef(a+=0.2, 0, 1, 0);
+	glRotatef(a+=0.2, 0, 0, 1);*/
+
+	// BASE CUBE RENDER
+	cube();
 
 	// SNAKE RENDER
 	glColor4fv(color.data.sf);
 	mainsnake.renderface();
 
 	glColor4fv(color.data.st);
-	for (unsigned int i = 10; i < Tail.size(); i++) {
-		if(i%10 == 0)mainsnake.renderTail(i);
-	}
+	maintail.render();
+
+	glColor4fv(color.data.fo);
+	mainfood.render();
 
 	glutSwapBuffers();
 }

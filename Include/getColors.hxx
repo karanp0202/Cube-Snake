@@ -11,6 +11,7 @@ struct Colors {
 	GLfloat* c5;
 	GLfloat* sf;
 	GLfloat* st;
+	GLfloat* fo;
 };
 
 class getColors {

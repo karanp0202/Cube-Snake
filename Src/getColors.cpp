@@ -27,6 +27,20 @@ void getColors::get(const char* colorfile)
 				break;
 			}
 			break;
+		case 'f':
+			(void)fscanf(file, "%c", &buff);
+			switch (buff) {
+			case 'o':
+				(void)fscanf(file, "%d", &n);
+				data.fo = new float[n];
+				for (int i = 0; i < n; i++) {
+					float tmp;
+					(void)fscanf(file, "%f,", &tmp);
+					*(data.fo + i) = tmp / 255.0f;
+				}
+				break;
+			}
+			break;
 		case 's':
 			(void)fscanf(file, "%c", &buff);
 			switch (buff) {

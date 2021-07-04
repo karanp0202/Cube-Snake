@@ -3,10 +3,13 @@
 getColors color;
 getCoords coord;
 Snake mainsnake;
+Tail maintail;
+Food mainfood;
 
 void getValues() {
 	color.get("./Res/colors.dat");
 	coord.get("./Res/coords.dat");
 
-	mainsnake.addTail(50);
+	maintail.addTail(50);
+	mainfood.addFood(40);
 };

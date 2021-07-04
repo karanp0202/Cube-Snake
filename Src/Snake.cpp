@@ -6,8 +6,6 @@ void Snake::changeVelocity(float x, float y, float z) {
 	Velocity.z = z;
 }
 
-std::vector<Vec3> Tail;
-
 void Snake::renderface() {
 	glBegin(GL_QUADS); {
 		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
@@ -40,46 +38,6 @@ void Snake::renderface() {
 		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
 		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
 	}glEnd();
-}
-
-void Snake::renderTail(int n) {
-	glBegin(GL_QUADS); {
-		float x = Tail[n].x, y = Tail[n].y, z = Tail[n].z;
-		glVertex3f(x - 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x + 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z + 1.0f);
-		glVertex3f(x - 1.0f, y + 1.0f, z + 1.0f);
-
-		glVertex3f(x + 1.0f, y - 1.0f, z - 1.0f);
-		glVertex3f(x - 1.0f, y - 1.0f, z - 1.0f);
-		glVertex3f(x - 1.0f, y + 1.0f, z - 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z - 1.0f);
-
-		glVertex3f(x + 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x + 1.0f, y - 1.0f, z - 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z - 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z + 1.0f);
-
-		glVertex3f(x - 1.0f, y - 1.0f, z - 1.0f);
-		glVertex3f(x - 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x - 1.0f, y + 1.0f, z + 1.0f);
-		glVertex3f(x - 1.0f, y + 1.0f, z - 1.0f);
-
-		glVertex3f(x - 1.0f, y + 1.0f, z + 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z + 1.0f);
-		glVertex3f(x + 1.0f, y + 1.0f, z - 1.0f);
-		glVertex3f(x - 1.0f, y + 1.0f, z - 1.0f);
-
-		glVertex3f(x + 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x - 1.0f, y - 1.0f, z + 1.0f);
-		glVertex3f(x - 1.0f, y - 1.0f, z - 1.0f);
-		glVertex3f(x + 1.0f, y - 1.0f, z - 1.0f);
-	}glEnd();
-}
-
-void Snake::addTail(int n) {
-	if(Tail.size() == 0)Tail.push_back(coord.data.snake);
-	for (int i = 0; i < n; i++)Tail.push_back(Tail[Tail.size()-1]);
 }
 
 void snakeRoam() {
@@ -169,18 +127,12 @@ void snakeRoam() {
 	}
 }
 
-void refreshtail() {
-	for (int i = Tail.size()-1; i > 0; i--) {
-		Tail[i] = Tail[i - 1];
-	}
-	Tail[0] = coord.data.snake;
-}
-
 void snakerefresh() {
 	coord.data.snake.x += mainsnake.Velocity.x;
 	coord.data.snake.y += mainsnake.Velocity.y;
 	coord.data.snake.z += mainsnake.Velocity.z;
-	refreshtail();
+	maintail.refreshtail();
+	mainfood.check();
 	snakeRoam();
 	setFrame();
 }
