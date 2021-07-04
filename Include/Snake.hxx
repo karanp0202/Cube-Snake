@@ -14,4 +14,5 @@ public:
 	void changeVelocity(float, float, float);
 	void renderface();
 	void renderTail(int);
+	void addTail(int);
 };

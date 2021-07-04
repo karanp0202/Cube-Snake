@@ -3,7 +3,7 @@
 extern getColors color;
 
 void display() {
-	glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
+	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 
 	glTranslatef(coord.data.cam.x, coord.data.cam.y, coord.data.cam.z);
@@ -67,8 +67,9 @@ void display() {
 	glColor4fv(color.data.sf);
 	mainsnake.renderface();
 
-	for (unsigned int i = 0; i < Tail.size; i++) {
-		mainsnake.renderTail(i);
+	glColor4fv(color.data.st);
+	for (unsigned int i = 10; i < Tail.size(); i++) {
+		if(i%10 == 0)mainsnake.renderTail(i);
 	}
 
 	glutSwapBuffers();

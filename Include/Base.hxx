@@ -3,8 +3,8 @@
 #include "../Libraries/Include/GL/glut.hxx"
 #include "../Include/getCoords.hxx"
 #include "../Include/getColors.hxx"
-#include "../Include/tailNode.hxx"
 #include "../Include/Snake.hxx"
+#include <vector>
 #include <thread>
 
 extern void display();
@@ -16,7 +16,7 @@ extern void snakerefresh();
 extern void setFrame();
 extern void rotateFrame();
 
-extern Node<Vec3> Tail;
+extern std::vector<Vec3> Tail;
 extern int activeFrame;
 extern getColors color;
 extern getCoords coord;

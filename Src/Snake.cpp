@@ -6,7 +6,7 @@ void Snake::changeVelocity(float x, float y, float z) {
 	Velocity.z = z;
 }
 
-Node<Vec3> Tail;
+std::vector<Vec3> Tail;
 
 void Snake::renderface() {
 	glBegin(GL_QUADS); {
@@ -44,7 +44,7 @@ void Snake::renderface() {
 
 void Snake::renderTail(int n) {
 	glBegin(GL_QUADS); {
-		float x = Tail.elementAt(n).x, y = Tail.elementAt(n).y, z = Tail.elementAt(n).z;
+		float x = Tail[n].x, y = Tail[n].y, z = Tail[n].z;
 		glVertex3f(x - 1.0f, y - 1.0f, z + 1.0f);
 		glVertex3f(x + 1.0f, y - 1.0f, z + 1.0f);
 		glVertex3f(x + 1.0f, y + 1.0f, z + 1.0f);
@@ -75,6 +75,10 @@ void Snake::renderTail(int n) {
 		glVertex3f(x - 1.0f, y - 1.0f, z - 1.0f);
 		glVertex3f(x + 1.0f, y - 1.0f, z - 1.0f);
 	}glEnd();
+}
+
+void Snake::addTail(int n) {
+	for (int i = 0; i < n; i++)Tail.push_back(Tail[Tail.size()-1]);
 }
 
 void snakeRoam() {
@@ -165,8 +169,10 @@ void snakeRoam() {
 }
 
 void refreshtail() {
-	Tail.push_last({ coord.data.snake.x,coord.data.snake.y, coord.data.snake.z });
-	Tail.remove_At(0);
+	for (int i = Tail.size()-1; i > 0; i--) {
+		Tail[i] = Tail[i - 1];
+	}
+	Tail[0] = coord.data.snake;
 }
 
 void snakerefresh() {
