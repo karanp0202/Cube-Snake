@@ -10,35 +10,35 @@ std::vector<Vec3> Tail;
 
 void Snake::renderface() {
 	glBegin(GL_QUADS); {
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
 
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
 
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
 
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
 
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y + 1.0f, coord.data.snake.z - 1.0f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y + 1.01f, coord.data.snake.z - 1.01f);
 
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z + 1.0f);
-		glVertex3f(coord.data.snake.x - 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
-		glVertex3f(coord.data.snake.x + 1.0f, coord.data.snake.y - 1.0f, coord.data.snake.z - 1.0f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z + 1.01f);
+		glVertex3f(coord.data.snake.x - 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
+		glVertex3f(coord.data.snake.x + 1.01f, coord.data.snake.y - 1.01f, coord.data.snake.z - 1.01f);
 	}glEnd();
 }
 
@@ -78,6 +78,7 @@ void Snake::renderTail(int n) {
 }
 
 void Snake::addTail(int n) {
+	if(Tail.size() == 0)Tail.push_back(coord.data.snake);
 	for (int i = 0; i < n; i++)Tail.push_back(Tail[Tail.size()-1]);
 }
 

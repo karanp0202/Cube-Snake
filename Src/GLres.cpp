@@ -7,4 +7,6 @@ Snake mainsnake;
 void getValues() {
 	color.get("./Res/colors.dat");
 	coord.get("./Res/coords.dat");
+
+	mainsnake.addTail(50);
 };
