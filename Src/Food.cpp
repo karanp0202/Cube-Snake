@@ -46,7 +46,6 @@ void Food::render() {
 Vec3 Random() {
 	Vec3 random{};
 
-	randomagain:
 	int frame = rand() % 6;
 
 	switch (frame)
@@ -96,16 +95,6 @@ Vec3 Random() {
 	case 5:
 		random.y = -coord.data.size.y - 1.0f;
 		break;
-	}
-
-	for (int i = 0; i < food.size(); i++) {
-		for (int j = 0; j < food.size(); j++) {
-			if (i != j)if (food[j].x > food[i].x - 2.0f && food[j].x < food[i].x + 2.0f
-				&& food[j].y > food[i].y - 2.0f && food[j].y < food[i].y + 2.0f
-				&& food[j].z > food[i].z - 2.0f && food[j].z < food[i].z + 2.0f) {
-				goto randomagain;
-			}
-		}
 	}
 
 	return random;
