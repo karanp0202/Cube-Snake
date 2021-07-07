@@ -1,3 +1,53 @@
 * {
-    color: aqua;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgba(17, 53, 153, 0.898);
+}
+
+header {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-color: white;
+    border-radius: 80px;
+    padding: 5px;
+    width: 60px;
+}
+
+.title {
+    background-image: linear-gradient(to right, rgb(252, 142, 134), rgb(252, 240, 134), rgb(134, 252, 167), rgb(154, 183, 255), rgb(219, 134, 252), rgb(252, 134, 197));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.data {
+    flex: 1;
+    padding: 5%;
+    width: 30%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.data p {
+    padding: 2%;
+}
+
+#v0 {
+    width: 800px;
 }

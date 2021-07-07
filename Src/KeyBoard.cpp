@@ -40,5 +40,5 @@ void keyDown(unsigned char key, int, int) {
 	if (key == '4')activeFrame = 4;
 	if (key == '5')activeFrame = 5;
 	if (key == 'q')exit(-1);
-	//if (key == '+')maintail.addTail(10);
+	if (key == '+')maintail.addTail(10);
 }

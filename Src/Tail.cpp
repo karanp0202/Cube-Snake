@@ -44,12 +44,12 @@ void Tail::render() {
 }
 
 void Tail::addTail(int n) {
-	if (tail.size() == 0)tail.push_back(coord.data.snake);
-	for (int i = 0; i < n; i++)tail.push_back(Vec3());
+	if (tail.size() == 0)tail.push_back({0,0,0});
+	for (int i = 0; i < n; i++)tail.push_back(tail[tail.size()-1]);
 }
 
 void Tail::refreshtail() {
-	for (int i = tail.size() - 1; i > 0; i--) {
+	for (int i = (int)tail.size() - 1; i > 0; i--) {
 		tail[i] = tail[i - 1];
 	}
 	tail[0] = coord.data.snake;

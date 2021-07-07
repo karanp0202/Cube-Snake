@@ -43,9 +43,9 @@ void Food::render() {
 	}
 }
 
-Vec3 Random() {
+Vec3 Random(int n) {
+	again:
 	Vec3 random{};
-
 	int frame = rand() % 6;
 
 	switch (frame)
@@ -97,12 +97,20 @@ Vec3 Random() {
 		break;
 	}
 
+	for (int i = 0; i < food.size(); i++) {
+		if (i != n)if (random.x > food[i].x - 4.0f && random.x < food[i].x + 4.0f
+			&& random.y > food[i].y - 4.0f && random.y < food[i].y + 4.0f
+			&& random.z > food[i].z - 4.0f && random.z < food[i].z + 4.0f) {
+			goto again;
+		}
+	}
+
 	return random;
 }
 
 void Food::addFood(int n) {
-	if (food.size() == 0)food.push_back(Random());
-	for (int i = 0; i < n; i++)food.push_back(Random());
+	if (food.size() == 0)food.push_back(Random(0));
+	for (int i = 0; i < n; i++)food.push_back(Random(i));
 }
 
 void Food::check() {
@@ -110,7 +118,7 @@ void Food::check() {
 		if (coord.data.snake.x > food[i].x - 2.0f && coord.data.snake.x < food[i].x + 2.0f
 			&& coord.data.snake.y > food[i].y - 2.0f && coord.data.snake.y < food[i].y + 2.0f
 			&& coord.data.snake.z > food[i].z - 2.0f && coord.data.snake.z < food[i].z + 2.0f) {
-			food[i] = Random();
+			food[i] = Random(i);
 			mainsnake.score++;
 			maintail.addTail(10);
 		}
