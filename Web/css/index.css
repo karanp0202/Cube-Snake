@@ -4,14 +4,17 @@
 }
 
 body {
-    background-color: rgba(17, 53, 153, 0.898);
+    height: 100vh;
+    background: linear-gradient( to right bottom, rgb(28, 46, 148),rgb(3, 21, 79));
 }
 
-header {
+header a {
     padding: 2%;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
+
 
 .logo {
     background-color: white;
@@ -21,6 +24,17 @@ header {
 }
 
 .title {
+    padding-left: 5%;
+    color: whitesmoke;
+    font-size: 32px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.t1 {
     background-image: linear-gradient(to right, rgb(252, 142, 134), rgb(252, 240, 134), rgb(134, 252, 167), rgb(154, 183, 255), rgb(219, 134, 252), rgb(252, 134, 197));
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -31,14 +45,9 @@ header {
     font-size: 32px;
 }
 
-main {
-    display: flex;
-    align-items: center;
-}
-
 .data {
     flex: 1;
-    padding: 5%;
+    padding: 2%;
     width: 30%;
     text-align: center;
     color: whitesmoke;
@@ -50,4 +59,12 @@ main {
 
 #v0 {
     width: 800px;
+}
+
+.info {
+    color: white;
+}
+
+.info a {
+    color: white;
 }
