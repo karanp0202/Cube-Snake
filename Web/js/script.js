@@ -1,5 +1,3 @@
-import('./p5.js')
-
 class Vector3 {
     angleX = 0;
     angleY = 0;
