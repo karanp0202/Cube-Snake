@@ -1,0 +1,66 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient( to right bottom, rgb(28, 46, 148),rgb(3, 21, 79));
+}
+
+header a {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.logo {
+    background-color: white;
+    border-radius: 80px;
+    padding: 5px;
+    width: 60px;
+}
+
+.title {
+    padding-left: 5%;
+    color: whitesmoke;
+    font-size: 32px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.t1 {
+    background-image: linear-gradient(to right, rgb(252, 142, 134), rgb(252, 240, 134), rgb(134, 252, 167), rgb(154, 183, 255), rgb(219, 134, 252), rgb(252, 134, 197));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.data {
+    flex: 1;
+    padding: 2%;
+    max-width: 50%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.data p {
+    padding: 2%;
+}
+
+.info {
+    color: white;
+}
+
+.info a {
+    color: white;
+}
