@@ -15,17 +15,40 @@ function mousePressed() {
 
 }
 
+function baseCube() {
+    noStroke();
+    translate(0,0, 100);
+    fill(252, 142, 134);
+    box(200, 200, 0);
+
+    translate(0,0, -200);
+    fill(252, 240, 134);
+    box(200, 200, 0);
+
+    translate(100,0, 100);
+    fill(134, 252, 167);
+    box(0, 200, 200);
+    
+    translate(-200,0, 0);
+    fill(154, 183, 255);
+    box(0, 200, 200);
+
+    translate(100, -100, 0);
+    fill(219, 134, 252);
+    box(200, 0, 200);
+
+    translate(0, 200, 0);
+    fill(252, 134, 197);
+    box(200, 0, 200);
+}
+
 function draw() {
     clear();
-    fill(255, 0, 0);
     translate(0,0, -200);
     rotateX(angle.angleX);
     rotateY(angle.angleY);
     rotateZ(angle.angleZ);
-    translate(0,0, 100);
-    box(200, 200, 1);
-    translate(0,0, -200);
-    box(200, 200, 1);
+    baseCube();
     angle.angleX += 0.01;
     angle.angleY += 0.01;
     angle.angleZ += 0.01;
