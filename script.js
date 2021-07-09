@@ -1,3 +1,5 @@
+import('./Web/js/p5.js');
+
 class Vector3 {
     angleX = 0;
     angleY = 0;
@@ -15,8 +17,18 @@ function mousePressed() {
 
 }
 
-function baseCube() {
+function draw() {
+    clear();
+    translate(0,0, -200);
+    rotateX(angle.angleX);
+    rotateY(angle.angleY);
+    rotateZ(angle.angleZ);
     noStroke();
+    baseCube();
+    // rotateGL();
+}
+
+function baseCube() {
     translate(0,0, 100);
     fill(252, 142, 134);
     box(200, 200, 0);
@@ -42,13 +54,7 @@ function baseCube() {
     box(200, 0, 200);
 }
 
-function draw() {
-    clear();
-    translate(0,0, -200);
-    rotateX(angle.angleX);
-    rotateY(angle.angleY);
-    rotateZ(angle.angleZ);
-    baseCube();
+function rotateGL() {
     angle.angleX += 0.01;
     angle.angleY += 0.01;
     angle.angleZ += 0.01;
