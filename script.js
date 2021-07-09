@@ -1,4 +1,4 @@
-import('./Web/js/p5.js');
+import("./Web/js/snake.js");
 
 class Vector3 {
     angleX = 0;
@@ -25,7 +25,7 @@ function draw() {
     rotateZ(angle.angleZ);
     noStroke();
     baseCube();
-    // rotateGL();
+    rotateGL();
 }
 
 function baseCube() {
