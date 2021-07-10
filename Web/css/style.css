@@ -5,6 +5,7 @@
 
 body {
     background-color: rgb(3, 21, 79);
+    overflow: hidden;
 }
 
 header a {
