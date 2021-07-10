@@ -1,1 +1,0 @@
-window.location.replace("./Web/cs.html");
