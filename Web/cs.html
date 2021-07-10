@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="shortcut icon" href="./res/img/logo.png" type="image/x-icon">
     <script src="./js/p5.js" type="text/javascript"></script>
+    <script src="./js/cube.js" type="text/javascript"></script>
+    <script src="./js/snake.js" type="text/javascript"></script>
+    <script src="./js/keyBoard.js" type="text/javascript"></script>
     <script src="./js/script.js" type="text/javascript"></script>
     <title>Cube-Snake</title>
 </head>
@@ -18,9 +21,6 @@
     </header>
     <main>
         <div class="data">
-            <div class="buttons">
-
-            </div>
             <h2 class="t1">Cube Snake</h2>
             <p>
                 This is a snake game new concept I've made using c++ language with OpenGL Grapahics API, the game is whole new concept I've designed and landed up in a program
@@ -28,6 +28,12 @@
             <p>
                 here the snake game we play from decades is converted to such a 3D mode where snake runs around these cube, but still the developement is in progress, so adding obstacles, levels and etc stuff will take some time
             </p>
+        </div>
+        <div class="buttons">
+            <button type="button" id="Wbutton" onclick="keyboard.UPKey()">W</button>
+            <button type="button" id="Abutton" onclick="keyboard.LEFTKey()">A</button>
+            <button type="button" id="Sbutton" onclick="keyboard.DOWNKey()">S</button>
+            <button type="button" id="Dbutton" onclick="keyboard.RIGHTKey()">D</button>
         </div>
     </main>
     <footer>
