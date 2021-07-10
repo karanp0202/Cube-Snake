@@ -28,6 +28,12 @@
     <Filter Include="Header Files\GL">
       <UniqueIdentifier>{4ce892d1-7137-44e9-9aa5-0ee760c3f2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Web">
+      <UniqueIdentifier>{9b4e5c30-eef5-4c9d-85be-c92d64691311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Web\js">
+      <UniqueIdentifier>{1dc31feb-30d8-4108-891c-2b19c03b472a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Display.cpp">
@@ -127,6 +133,15 @@
     </None>
     <None Include="Res\coords.dat">
       <Filter>Resource Files</Filter>
+    </None>
+    <None Include="index.html">
+      <Filter>Web</Filter>
+    </None>
+    <None Include="p5.js">
+      <Filter>Web\js</Filter>
+    </None>
+    <None Include="script.js">
+      <Filter>Web\js</Filter>
     </None>
   </ItemGroup>
 </Project>

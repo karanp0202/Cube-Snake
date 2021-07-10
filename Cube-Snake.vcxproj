@@ -184,10 +184,13 @@
     <None Include="Debug\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>
+    <None Include="index.html" />
+    <None Include="p5.js" />
     <None Include="Release\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>
     <None Include="Res\coords.dat" />
+    <None Include="script.js" />
     <None Include="x64\Debug\freeglut.dll">
       <DeploymentContent>false</DeploymentContent>
     </None>
