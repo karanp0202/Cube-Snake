@@ -20,7 +20,6 @@ function setup() {
     tail.addTail(50);
     var canvas = document.getElementById("defaultCanvas0");
     var demo = document.getElementById("demo").innerHTML = null;
-    
 }
 
 function start() {
@@ -28,6 +27,9 @@ function start() {
     document.getElementById("defaultCanvas0").style = "display:block";
     document.getElementById("play-button").style = "display:none";
     this.running = true;
+    if (window.matchMedia("(max-width: 786px)").matches) {
+        document.getElementById("info").style = "display:none";
+    }
 }
 
 function draw() {
@@ -46,8 +48,8 @@ function draw() {
         cube.rotateCube();
         cube.renderCube();
 
-        tail.update();
-        tail.renderTail();
+        //tail.update();
+        //tail.renderTail();
     }
 }
 
