@@ -29,6 +29,7 @@ function start() {
     this.running = true;
     if (window.matchMedia("(max-width: 786px)").matches) {
         document.getElementById("info").style = "display:none";
+        document.getElementById("buttons").style = "display:block";
     }
 }
 

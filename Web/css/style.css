@@ -148,6 +148,29 @@
     display: none;
 }
 
+#buttons {
+    margin-top: 25%;
+    display: none;
+}
+
+#buttons div {
+    display: flex;
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+}
+
+#buttons div button {
+    padding: 15px;
+    margin-inline: 46px;
+    padding-inline: 20px;
+    background-color: rgb(252, 139, 86);
+    border-radius: 15px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 786px) {
     .nav ul {
         display: none;
