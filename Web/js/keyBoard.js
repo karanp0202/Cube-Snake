@@ -2,7 +2,6 @@ class keyBoard {
     constructor() { }
 
     UPKey() {
-        console.log("W key pressed !");
         switch (cube.frame) {
             case 0:
                 snake.speed.X = 0.0;

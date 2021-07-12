@@ -8,8 +8,37 @@ function normalize(angle) {
     return angle;
 }
 
+function stretch(angle) {
+    switch (cube.frame) {
+        case 0:
+            angle.X -= (snake.pos.X / 15.0);
+            angle.Y += (snake.pos.Y / 15.0);
+            break;
+        case 1:
+            angle.X += (snake.pos.X / 15.0);
+            angle.Y += (snake.pos.Y / 15.0);
+            break;
+        case 2:
+            angle.X += (snake.pos.Z / 15.0);
+            angle.Z += (snake.pos.Y / 15.0);
+            break;
+        case 3:
+            angle.X -= (snake.pos.Z / 15.0);
+            angle.Z -= (snake.pos.Y / 15.0);
+            break;
+        case 4:
+            angle.Y += (snake.pos.Z / 15.0);
+            angle.Z += (snake.pos.X / 15.0);
+            break;
+        case 5:
+            angle.Y -= (snake.pos.Z / 15.0);
+            angle.Z -= (snake.pos.X / 15.0);
+            break;
+    }
+    return angle;
+}
+
 function setFrame(angle) {
-        
     switch (cube.frame) {
         case 0:
             if (angle.X > 0.0 && angle.X <= 180.0) angle.X -= angle.X / 20.0;
@@ -68,6 +97,7 @@ function setFrame(angle) {
             if (angle.Z >= 180.0 && angle.Z < 360) angle.Z += (360 - angle.Z) / 20.0;
             break;
     }
+    angle = this.stretch(angle);
     return angle;
 }
 
@@ -78,7 +108,6 @@ class Cube {
         this.angle = new Vector3(0, 0, 0);
     }
     renderCube() {
-        noStroke();
         
         translate(0, 0, this.size.Z / 2);
         fill(252, 142, 134); box(this.size.X, this.size.Y, 0);

@@ -119,7 +119,8 @@ class Snake {
     }
     renderFace() {
         translate(-this.pos.X, -this.pos.Y, -this.pos.Z);
-        box(2);
+        fill(0, 0, 0);
+        box(2.1);
         translate(this.pos.X, this.pos.Y,this.pos.Z);
     }
     changePos() {
