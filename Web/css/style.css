@@ -172,15 +172,15 @@
         display: flex;
         margin: auto;
         width: max-content;
-        padding: 10px;
     }
 
     #buttons div button {
         padding: 20px;
-        margin-inline: 46px;
-        padding-inline: 35px;
+        margin-inline: 30px;
+        padding-inline: 25px;
         background-color: rgb(252, 139, 86);
-        border-radius: 15px;
+        border-radius: 35px;
+        border: 3px solid green;
         border-color: burlywood;
         font-size: 16px;
         font-weight: bold;
