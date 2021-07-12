@@ -114,7 +114,7 @@ function snakeRoam() {
 class Snake {
     constructor() {
         this.Speed = 0.3;
-        this.pos = new Vector3(0, 0, -21);
+        this.pos = new Vector3(16, 16, -21);
         this.speed = new Vector3(-0.3, 0, 0);
     }
     renderFace() {
