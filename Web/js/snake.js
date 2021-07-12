@@ -115,7 +115,7 @@ class Snake {
     constructor() {
         this.Speed = 0.3;
         this.pos = new Vector3(0, 0, -21);
-        this.speed = new Vector3(0, 0, 0);
+        this.speed = new Vector3(-0.3, 0, 0);
     }
     renderFace() {
         translate(-this.pos.X, -this.pos.Y, -this.pos.Z);

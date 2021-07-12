@@ -1,3 +1,144 @@
-body {
-    background-color: grey;
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: monospace;
+    background-color:floralwhite;
+}
+
+.navbar {
+    padding: 1%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 25px;
+    padding: 5px;
+    width: 60px;
+    border-radius: 70px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    transition: all 0.2s;
+}
+
+.logo:hover {
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.nav {
+    flex: 1;
+    text-align: right;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.link {
+    margin: 20px;
+    padding: 10px;
+    padding-inline: 20px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(hsl(14, 100%, 75%),rgb(255, 120, 78));
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    transition: all 0.2s;
+}
+
+.link:hover {
+    padding-inline: 25px;
+    margin: 15px;
+    border-style: dotted;
+    transition: all 0.2s;
+}
+
+.link:active {
+    background: linear-gradient(rgb(228, 88, 45),rgb(255, 120, 78));
+    transition: all 0.2s;
+}
+
+.menu {
+    margin: 25px;
+    padding: 5px;
+    width: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+}
+
+.menu:hover {
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+}
+
+.section {
+    display: block;
+}
+
+.cube-snake {
+    display: flex;
+}
+
+.col-1 {
+    text-align: center;
+    max-width: 100%;    
+    padding: 5%;
+}
+
+.col-1 * {
+    margin: 15px;
+}
+
+.col-1 h2 {
+    font-size: 42px;
+}
+
+.col-1 h3 {
+    font-size: 16px;
+    color: darkblue;
+}
+
+.col-1 p {
+    font-size: 18px;
+}
+
+#download {
+    margin: 0%;
+}
+
+#play-button {
+    font-size: 18px;
+    padding: 10px;
+    padding-inline: 25px;
+    font-weight: bold;
+    background: rgb(162, 255, 23);
+    border-style: dashed;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#play-button:hover {
+    padding-inline: 30px;
+    background: rgb(192, 255, 98);
+    transition: all 0.2s;
+}
+
+#defaultCanvas0 {
+    display: none;
 }

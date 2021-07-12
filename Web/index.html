@@ -6,17 +6,41 @@
     <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./res/img/logo.png" type="image/x-icon">
+    <script src="./js/p5.js" type="text/javascript"></script>
+    <script src="./js/cube.js" type="text/javascript"></script>
+    <script src="./js/snake.js" type="text/javascript"></script>
+    <script src="./js/tail.js" type="text/javascript"></script>
+    <script src="./js/keyBoard.js" type="text/javascript"></script>
+    <script src="./js/game.js" type="text/javascript"></script>
     <title>Cube-Snake</title>
 </head>
 <body>
     <header class="header">
         <div class="navbar">
-            <img src="./res/img/logo.png" alt="Coding with Karan" class="logo">
-            <img src="" alt="menu icon" class="menu">
+            <a href="./"><img src="./res/img/logo.png" alt="Coding with Karan" class="logo"></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./" class="link">Home</a></li>
+                    <li><a href="#About" class="link">About</a></li>
+                </ul>
+            </nav>
+            <img src="./res/img/menu.png" alt="menu icon" class="menu">
         </div>
     </header>
-    <main class="main">
-
+    <main class="section">
+        <div class="cube-snake">
+            <div class="col-1">
+                <h2>Cube Snake</h2>
+                <h3>a new snake game concept</h3>
+                <p>
+                    We have played a game called snake, I just tried to modify this as per todays demand where the snake is running over the 3D cube which rotates as per the position of snake and lots of food as we have more surface to play. <br> The executable for this game is available to <a href="https://github.com/karanp0202/Cube-Snake/releases/latest" id="download" target="_blank">download</a>.
+                </p>
+                <button type="button" onclick="start();" id="play-button">Play demo</button>
+            </div>
+            <div class="col-2" id="demo">
+                
+            </div>
+        </div>
     </main>
     <footer class="footer">
 
