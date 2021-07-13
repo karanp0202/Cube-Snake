@@ -10,17 +10,7 @@ snake = new Snake;
 tail = new Tail;
 cube = new Cube(40, 40, 40);
 keyboard = new keyBoard;
-
-function setup() {
-    var running;
-    createCanvas(600, 400, WEBGL);
-    angleMode(DEGREES);
-    perspective(30, width / height, 0.1, 500);
-    frameRate(60);
-    tail.addTail(50);
-    var canvas = document.getElementById("defaultCanvas0");
-    var demo = document.getElementById("demo").innerHTML = null;
-}
+food = new Food(40);
 
 function start() {
     this.demo.appendChild(canvas);
@@ -31,6 +21,18 @@ function start() {
         document.getElementById("info").style = "display:none";
         document.getElementById("buttons").style = "display:block";
     }
+}
+
+function setup() {
+    var running;
+    createCanvas(600, 400, WEBGL);
+    angleMode(DEGREES);
+    perspective(30, width / height, 0.1, 500);
+    frameRate(60);
+    tail.addTail(50);
+    var canvas = document.getElementById("defaultCanvas0");
+    var demo = document.getElementById("demo").innerHTML = null;
+    //start();//
 }
 
 function draw() {
@@ -51,6 +53,9 @@ function draw() {
 
         //tail.update();
         //tail.renderTail();
+
+        food.check();
+        food.renderFood();
     }
 }
 
@@ -68,9 +73,6 @@ function keyPressed() {
                 break;
             case 68:
                 keyboard.RIGHTKey();
-                break;
-            case 81:
-                document.getElementById("defaultCanvas0").remove();
                 break;
         }
     }
