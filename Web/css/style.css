@@ -147,6 +147,15 @@
 #defaultCanvas0 {
     display: none;
 }
+    
+#buttons {
+    margin-top: 25%;
+    display: none;
+}
+
+#inst_mobile {
+    display: none;
+}
 
 @media only screen and (max-width: 786px) {
     .nav ul {
@@ -155,6 +164,14 @@
 
     .cube-snake {
         display: block;
+    }
+
+    #inst_mobile {
+        display: block;
+    }
+
+    #inst_desktop {
+        display: none;
     }
 
     #defaultCanvas0 {
