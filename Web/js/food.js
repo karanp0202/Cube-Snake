@@ -1,6 +1,7 @@
 class Food {
     constructor(count) {
         this.foodvec = [];
+        this.score = 0;
         for (let i = 0; i < count; i++){
             this.foodvec[i] = this.randomise();
         }
@@ -40,7 +41,8 @@ class Food {
             if (snake.pos.X > this.foodvec[i].X - 2.0 && snake.pos.X < this.foodvec[i].X + 2.0
                 && snake.pos.Y > this.foodvec[i].Y - 2.0 && snake.pos.Y < this.foodvec[i].Y + 2.0
                 && snake.pos.Z > this.foodvec[i].Z - 2.0 && snake.pos.Z < this.foodvec[i].Z + 2.0) {
-                this.foodvec[i] = this.randomise();
+                this.foodvec[i] = this.randomise(); this.score++;
+                document.getElementById("scorecount").innerHTML = this.score.toString();;
             }
         }
     }

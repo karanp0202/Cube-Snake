@@ -149,6 +149,25 @@
     display: none;
 }
 
+.progress {
+    display: none;
+    padding-inline: 20px;
+}
+
+.space {
+    flex: 1;
+}
+
+.score {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#scorecount {
+    padding-inline: 5px;
+}
+
 @media only screen and (max-width: 786px) {
     .nav ul {
         display: none;

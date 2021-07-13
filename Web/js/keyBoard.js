@@ -2,118 +2,134 @@ class keyBoard {
     constructor() { }
 
     UPKey() {
-        switch (cube.frame) {
-            case 0:
-                snake.speed.X = 0.0;
-                snake.speed.Y = snake.Speed;
-                return;
-            case 1:
-                snake.speed.X = 0.0;
-                snake.speed.Y = snake.Speed;
-                break;
-            case 2:
-                snake.speed.Z = 0.0;
-                snake.speed.Y = snake.Speed;
-                break;
-            case 3:
-                snake.speed.Z = 0.0;
-                snake.speed.Y = snake.Speed;
-                break;
-            case 4:
-                snake.speed.X = 0.0;
-                snake.speed.Z = snake.Speed;
-                break;
-            case 5:
-                snake.speed.X = 0.0;
-                snake.speed.Z = -snake.Speed;
-                break;
-        }
+        if (-snake.pos.Z < cube.size.Z / 2 + 0.4 && -snake.pos.Z > -cube.size.Z / 2 - 0.4)
+            switch (cube.frame) {
+                case 2:
+                    snake.speed.Z = 0.0;
+                    snake.speed.Y = snake.Speed;
+                    return;
+                case 3:
+                    snake.speed.Z = 0.0;
+                    snake.speed.Y = snake.Speed;
+                    return;
+            }
+        if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4)
+            switch (cube.frame) {
+                case 0:
+                    snake.speed.X = 0.0;
+                    snake.speed.Y = snake.Speed;
+                    return;
+                case 1:
+                    snake.speed.X = 0.0;
+                    snake.speed.Y = snake.Speed;
+                    return;
+                case 4:
+                    snake.speed.X = 0.0;
+                    snake.speed.Z = snake.Speed;
+                    return;
+                case 5:
+                    snake.speed.X = 0.0;
+                    snake.speed.Z = -snake.Speed;
+                    return;
+            }
     }
     
     DOWNKey() {
-        switch (cube.frame) {
-            case 0:
-                snake.speed.X = 0.0;
-                snake.speed.Y = -snake.Speed;
-                return;
-            case 1:
-                snake.speed.X = 0.0;
-                snake.speed.Y = -snake.Speed;
-                break;
-            case 2:
-                snake.speed.Z = 0.0;
-                snake.speed.Y = -snake.Speed;
-                break;
-            case 3:
-                snake.speed.Z = 0.0;
-                snake.speed.Y = -snake.Speed;
-                break;
-            case 4:
-                snake.speed.X = 0.0;
-                snake.speed.Z = -snake.Speed;
-                break;
-            case 5:
-                snake.speed.X = 0.0;
-                snake.speed.Z = snake.Speed;
-                break;
-        }
+        if (-snake.pos.Z < cube.size.Z / 2 + 0.4 && -snake.pos.Z > -cube.size.Z / 2 - 0.4)
+            switch (cube.frame) {
+                case 2:
+                    snake.speed.Z = 0.0;
+                    snake.speed.Y = -snake.Speed;
+                    return;
+                case 3:
+                    snake.speed.Z = 0.0;
+                    snake.speed.Y = -snake.Speed;
+                    return;
+            }
+        if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4)
+            switch (cube.frame) {
+                case 0:
+                    snake.speed.X = 0.0;
+                    snake.speed.Y = -snake.Speed;
+                    return;
+                case 1:
+                    snake.speed.X = 0.0;
+                    snake.speed.Y = -snake.Speed;
+                    return;
+                case 4:
+                    snake.speed.X = 0.0;
+                    snake.speed.Z = -snake.Speed;
+                    return;
+                case 5:
+                    snake.speed.X = 0.0;
+                    snake.speed.Z = snake.Speed;
+                    return;
+            }
     }
     
     LEFTKey() {
-        switch (cube.frame) {
-            case 0:
-                snake.speed.X = snake.Speed;
-                snake.speed.Y = 0.0;
-                return;
-            case 1:
-                snake.speed.X = -snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 2:
-                snake.speed.Z = -snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 3:
-                snake.speed.Z = snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 4:
-                snake.speed.X = snake.Speed;
-                snake.speed.Z = 0.0;
-                break;
-            case 5:
-                snake.speed.X = snake.Speed;
-                snake.speed.Z = 0.0;
-                break;
-        }
+        if (-snake.pos.Z < cube.size.Z / 2 + 0.4 && -snake.pos.Z > -cube.size.Z / 2 - 0.4)
+            switch (cube.frame) {
+                case 4:
+                    snake.speed.X = snake.Speed;
+                    snake.speed.Z = 0.0;
+                    return;
+                case 5:
+                    snake.speed.X = snake.Speed;
+                    snake.speed.Z = 0.0;
+                    return;
+            }
+        if (-snake.pos.Y < cube.size.Y / 2 + 0.4 && -snake.pos.Y > -cube.size.Y / 2 - 0.4)
+            switch (cube.frame) {
+                case 0:
+                    snake.speed.X = snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 1:
+                    snake.speed.X = -snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 2:
+                    snake.speed.Z = -snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 3:
+                    snake.speed.Z = snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+            }
     }
     
     RIGHTKey() {
-        switch (cube.frame) {
-            case 0:
-                snake.speed.X = -snake.Speed;
-                snake.speed.Y = 0.0;
-                return;
-            case 1:
-                snake.speed.X = snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 2:
-                snake.speed.Z = snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 3:
-                snake.speed.Z = -snake.Speed;
-                snake.speed.Y = 0.0;
-                break;
-            case 4:
-                snake.speed.X = -snake.Speed;
-                snake.speed.Z = 0.0;
-                break;
-            case 5:
-                snake.speed.X = -snake.Speed;
-                snake.speed.Z = 0.0;
-                break;
-        }    
+        if (-snake.pos.Z < cube.size.Z / 2 + 0.4 && -snake.pos.Z > -cube.size.Z / 2 - 0.4)
+            switch (cube.frame) {
+                case 4:
+                    snake.speed.X = -snake.Speed;
+                    snake.speed.Z = 0.0;
+                    return;
+                case 5:
+                    snake.speed.X = -snake.Speed;
+                    snake.speed.Z = 0.0;
+                    return;
+            }
+        if (-snake.pos.Y < cube.size.Y / 2 + 0.4 && -snake.pos.Y > -cube.size.Y / 2 - 0.4)
+            switch (cube.frame) {
+                case 0:
+                    snake.speed.X = -snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 1:
+                    snake.speed.X = snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 2:
+                    snake.speed.Z = snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+                case 3:
+                    snake.speed.Z = -snake.Speed;
+                    snake.speed.Y = 0.0;
+                    return;
+            }   
     }
 }

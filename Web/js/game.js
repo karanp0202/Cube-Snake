@@ -6,16 +6,11 @@ class Vector3 {
     }
 }
 
-snake = new Snake;
-tail = new Tail;
-cube = new Cube(40, 40, 40);
-keyboard = new keyBoard;
-food = new Food(40);
-
 function start() {
     this.demo.appendChild(canvas);
     document.getElementById("defaultCanvas0").style = "display:block";
     document.getElementById("play-button").style = "display:none";
+    document.getElementById("progress").style = "display:flex";
     this.running = true;
     if (window.matchMedia("(max-width: 786px)").matches) {
         document.getElementById("info").style = "display:none";
@@ -24,12 +19,17 @@ function start() {
 }
 
 function setup() {
+
+    snake = new Snake;
+    tail = new Tail(50);
+    cube = new Cube(40, 40, 40);
+    keyboard = new keyBoard;
+    food = new Food(40);
     var running;
     createCanvas(600, 400, WEBGL);
     angleMode(DEGREES);
     perspective(30, width / height, 0.1, 500);
     frameRate(60);
-    tail.addTail(50);
     var canvas = document.getElementById("defaultCanvas0");
     var demo = document.getElementById("demo").innerHTML = null;
     //start();//
@@ -51,8 +51,8 @@ function draw() {
         cube.rotateCube();
         cube.renderCube();
 
-        //tail.update();
-        //tail.renderTail();
+        tail.update();
+        tail.renderTail();
 
         food.check();
         food.renderFood();
