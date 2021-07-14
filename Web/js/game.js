@@ -32,7 +32,7 @@ function setup() {
     frameRate(60);
     var canvas = document.getElementById("defaultCanvas0");
     var demo = document.getElementById("demo").innerHTML = null;
-    //start();//
+    start();//
 }
 
 function draw() {

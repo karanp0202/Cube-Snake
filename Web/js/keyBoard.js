@@ -13,7 +13,8 @@ class keyBoard {
                     snake.speed.Y = snake.Speed;
                     return;
             }
-        if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4)
+        if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4
+            && snake.speed.Y == 0)
             switch (cube.frame) {
                 case 0:
                     snake.speed.X = 0.0;

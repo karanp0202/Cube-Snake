@@ -1,53 +1,44 @@
 class Tail {
     constructor(count) {
-        this.tailvec = [];
+        this.tailX = [];
+        this.tailY = [];
+        this.tailZ = [];
         for (let i = 0; i < count; i++){
-            this.tailvec[i] = this.randomise();
+            this.tailX.push(snake.pos.X);
+            this.tailY.push(snake.pos.Y);
+            this.tailZ.push(snake.pos.Z);
         }
     }
 
-    randomise = () => {
-        var ret = new Vector3;
-        var frame = parseInt(Math.random()*6);
-        ret.X = Math.random()*40-20;
-        ret.Y = Math.random()*40-20;
-        ret.Z = Math.random()*40-20;
-        switch (parseInt(frame)) {
-            case 0:
-                ret.Z = -21;
-                break;
-            case 1:
-                ret.Z = 21;
-                break;
-            case 2:
-                ret.X = -21;
-                break;
-            case 3:
-                ret.X = 21;
-                break;
-            case 4:
-                ret.Y = 21;
-                break;
-            case 5:
-                ret.Y = -21;
-                break;
+    add = (count) => {
+        for (let i = 0; i < count; i++){
+            this.tailX.push(0);
+            this.tailY.push(0);
+            this.tailZ.push(0);
         }
-        return ret;
     }
 
     update = () => {
-        for (let i = 1; i < this.tailvec.length; i++) {
-            this.tailvec[i] = this.tailvec[i - 1];
+        for (var i = this.tailX.length-1; i > 0; i--){
+            this.tailX[i] = this.tailX[i - 1];
+            this.tailY[i] = this.tailY[i - 1];
+            this.tailZ[i] = this.tailZ[i - 1];
         }
-        this.tailvec[0] = snake.pos;
+        this.tailX[0] = snake.pos.X;
+        this.tailY[0] = snake.pos.Y;
+        this.tailZ[0] = snake.pos.Z;
+    }
+
+    render(n) {
+        translate(-this.tailX[n], -this.tailY[n], -this.tailZ[n]);
+        fill(255, 255, 255);
+        box(2.1);
+        translate(this.tailX[n], this.tailY[n], this.tailZ[n]);
     }
 
     renderTail = () => {
-        for (let i = 0; i < this.tailvec.length; i++) {
-            translate(-this.tailvec[i].X, -this.tailvec[i].Y, -this.tailvec[i].Z);
-            fill(255, 255, 255);
-            box(2);
-            translate(this.tailvec[i].X, this.tailvec[i].Y, this.tailvec[i].Z);
+        for (let i = 10; i < this.tailX.length; i++) {
+            if(i%10 == 0)this.render(i);
         }
     }
 
