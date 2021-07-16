@@ -59,23 +59,7 @@
 }
 
 .menu {
-    margin: 25px;
-    padding: 5px;
-    width: 30px;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 15px;
-    border-color: rgba(0, 0, 0, 0.8);
-    transition: all 0.2s;
-}
-
-.menu:hover {
-    cursor: pointer;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    border-color: rgba(0, 0, 0, 0.8);
-    transition: all 0.2s;
+    display: none;
 }
 
 .section {
@@ -137,8 +121,10 @@
 }
 
 #defaultCanvas0 {
+    position: inherit;
     background-color: transparent;
     display: none;
+    filter:blur(0px);
 }
     
 #buttons {
@@ -172,6 +158,18 @@
 @media only screen and (max-width: 786px) {
     .nav ul {
         display: none;
+    }
+    
+    .menu {
+        display: block;
+        margin: 25px;
+        padding: 5px;
+        width: 30px;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 15px;
+        border-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.2s;
     }
 
     .cube-snake {

@@ -18,7 +18,7 @@ function start() {
     }
 }
 
-function setup() {
+setup = () => {
 
     snake = new Snake;
     tail = new Tail(50);
@@ -31,11 +31,11 @@ function setup() {
     perspective(30, width / height, 0.1, 500);
     frameRate(60);
     var canvas = document.getElementById("defaultCanvas0");
-    var demo = document.getElementById("demo").innerHTML = null;
+    //snake.pause();//
     //start();//
 }
 
-function draw() {
+draw = () => {
     if (this.running) {
         clear();
         translate(0, 0, 200);
@@ -45,21 +45,26 @@ function draw() {
     
         noStroke();
 
-        snake.changePos();
+        if (!snake.paused) {
+            snake.changePos();
+            cube.rotateCube();
+            tail.update();
+            tail.check();
+            food.check();
+        } else {
+            cube.angle.X++;
+            cube.angle.Y++;
+            cube.angle.Z++;
+        }
+
         snake.renderFace();
-    
-        cube.rotateCube();
         cube.renderCube();
-
-        tail.update();
         tail.renderTail();
-
-        food.check();
         food.renderFood();
     }
 }
 
-function keyPressed() {
+keyPressed = () => {
     if (this.running) {
         switch (keyCode) {
             case 87:
@@ -74,6 +79,8 @@ function keyPressed() {
             case 68:
                 keyboard.RIGHTKey();
                 break;
+            case 27:
+                snake.pause();
         }
     }
 }

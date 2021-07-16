@@ -1,4 +1,5 @@
-function normalize(angle) {
+normalize = (angle) => {
+    // to normalise the angles
     if (angle.X > 360) angle.X -= 360;
     if (angle.Y > 360) angle.Y -= 360;
     if (angle.Z > 360) angle.Z -= 360;
@@ -8,7 +9,8 @@ function normalize(angle) {
     return angle;
 }
 
-function stretch(angle) {
+stretch = (angle) => {
+    // to tilt the cube as snake position on frame
     switch (cube.frame) {
         case 0:
             angle.X -= (snake.pos.X / 15.0);
@@ -38,9 +40,11 @@ function stretch(angle) {
     return angle;
 }
 
-function setFrame(angle) {
+setFrame = (angle) => {
+    // pull cube to the angle of active frame
     switch (cube.frame) {
         case 0:
+            // for angle 0.00
             if (angle.X > 0.0 && angle.X <= 180.0) angle.X -= angle.X / 20.0;
             if (angle.X >= 180.0 && angle.X < 360) angle.X += (360 - angle.X) / 20.0;
             if (angle.Y > 0.0 && angle.Y <= 180.0) angle.Y -= angle.Y / 20.0;
@@ -49,6 +53,7 @@ function setFrame(angle) {
             if (angle.Z >= 180.0 && angle.Z < 360) angle.Z += (360 - angle.Z) / 20.0;
             break;
         case 1:
+            // for angle 180.00
             if (angle.X >= 0.0 && angle.X < 180.0) angle.X += (180.0 - angle.X) / 20.0;
             if (angle.X > 180.0 && angle.X <= 360) angle.X -= (angle.X - 180.0) / 20.0;
             if (angle.Y > 0.0 && angle.Y <= 180.0) angle.Y -= angle.Y / 20.0;
@@ -57,7 +62,7 @@ function setFrame(angle) {
             if (angle.Z >= 180.0 && angle.Z < 360) angle.Z += (360 - angle.Z) / 20.0;
             break;
         case 2:
-            // This is for 90.0 angle
+            // for angle 90.00
             if (angle.X >= 0.0 && angle.X < 90.0) angle.X += (90.0 - angle.X) / 20.0;
             if (angle.X > 90.0 && angle.X <= 270.0) angle.X -= (angle.X - 90.0) / 20.0;
             if (angle.X >= 270.0 && angle.X <= 360) angle.X += (450.0 - angle.X) / 20.0;
@@ -67,7 +72,7 @@ function setFrame(angle) {
             if (angle.Z >= 180.0 && angle.Z < 360) angle.Z += (360 - angle.Z) / 20.0;
             break;
         case 3:
-            // This is for 270.0 angle
+            // for angle 270.00
             if (angle.X >= 0.0 && angle.X <= 90.0) angle.X -= (angle.X + 90.0) / 20.0;
             if (angle.X >= 90.0 && angle.X < 270.0) angle.X += (270.0 - angle.X) / 20.0;
             if (angle.X > 270.0 && angle.X <= 360) angle.X -= (angle.X - 270.0) / 20.0;
@@ -79,7 +84,6 @@ function setFrame(angle) {
         case 4:
             if (angle.X > 0.0 && angle.X <= 180.0) angle.X -= angle.X / 20.0;
             if (angle.X >= 180.0 && angle.X < 360) angle.X += (360 - angle.X) / 20.0;
-            // This is for 90.0 angle
             if (angle.Y >= 0.0 && angle.Y < 90.0) angle.Y += (90.0 - angle.Y) / 20.0;
             if (angle.Y > 90.0 && angle.Y <= 270.0) angle.Y -= (angle.Y - 90.0) / 20.0;
             if (angle.Y >= 270.0 && angle.Y <= 360) angle.Y += (450.0 - angle.Y) / 20.0;
@@ -89,7 +93,6 @@ function setFrame(angle) {
         case 5:
             if (angle.X > 0.0 && angle.X <= 180.0) angle.X -= angle.X / 20.0;
             if (angle.X >= 180.0 && angle.X < 360) angle.X += (360 - angle.X) / 20.0;
-            // This is for 270.0 angle
             if (angle.Y >= 0.0 && angle.Y <= 90.0) angle.Y -= (angle.Y + 90.0) / 20.0;
             if (angle.Y >= 90.0 && angle.Y < 270.0) angle.Y += (270.0 - angle.Y) / 20.0;
             if (angle.Y > 270.0 && angle.Y <= 360) angle.Y -= (angle.Y - 270.0) / 20.0;
@@ -107,7 +110,7 @@ class Cube {
         this.size = new Vector3(X, Y, Z);
         this.angle = new Vector3(0, 0, 0);
     }
-    renderCube() {
+    renderCube = () => {
         
         translate(0, 0, this.size.Z / 2);
         fill(252, 142, 134); box(this.size.X, this.size.Y, 0);
@@ -123,7 +126,7 @@ class Cube {
         fill(252, 134, 197); box(this.size.X, 0, this.size.Z);
         translate(0, -this.size.Y/2, 0);
     }
-    rotateCube() {
+    rotateCube = () => {
         // this.angle.X += 0.01;
         // this.angle.Y += 0.01;
         // this.angle.Z += 0.01;

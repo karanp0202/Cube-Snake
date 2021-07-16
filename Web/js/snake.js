@@ -1,4 +1,4 @@
-function snakeRoam() {
+snakeRoam = () => {
     switch (cube.frame) {
         case 0:
             if (snake.pos.X < -cube.size.X/2 - 1) {
@@ -113,20 +113,26 @@ function snakeRoam() {
 
 class Snake {
     constructor() {
+        this.paused = false;
         this.Speed = 0.3;
         this.pos = new Vector3(16, 16, -21);
         this.speed = new Vector3(-0.3, 0, 0);
     }
-    renderFace() {
+    renderFace = () => {
         translate(-this.pos.X, -this.pos.Y, -this.pos.Z);
         fill(0, 0, 0);
-        box(2.1);
+        box(2.2);
         translate(this.pos.X, this.pos.Y,this.pos.Z);
     }
-    changePos() {
+    changePos = () => {
         this.pos.X += this.speed.X;
         this.pos.Y += this.speed.Y;
         this.pos.Z += this.speed.Z;
         snakeRoam();
+    }
+    pause = () => {
+        this.paused ? this.paused = false : this.paused = true;
+        if (this.paused) document.getElementById("demo").style = "filter:blur(10px)";
+        else document.getElementById("demo").style = "filter:blur(0px)";
     }
 }
