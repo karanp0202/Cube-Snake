@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
     font-family: monospace;
-    background-color:floralwhite;
+    background-color:rgb(3, 21, 79);
 }
 
 .navbar {
@@ -22,6 +22,7 @@
     border-width: 1px;
     border-color: transparent;
     transition: all 0.2s;
+    background-color: white;
 }
 
 .nav {
@@ -38,9 +39,12 @@
     padding: 10px;
     padding-inline: 20px;
     text-decoration: none;
-    color: white;
-    background: linear-gradient(hsl(14, 100%, 75%),rgb(255, 120, 78));
+    color: black;
+    background: rgb(162, 255, 23);
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 15px;
+    border-color: black;
     border-style: solid;
     border-width: 2px;
     transition: all 0.2s;
@@ -60,6 +64,7 @@
 
 .menu {
     display: none;
+    background-color: rgb(44, 196, 216);
 }
 
 .section {
@@ -82,14 +87,16 @@
 
 .col-1 h2 {
     font-size: 42px;
+    color: rgb(134, 223, 134);
 }
 
 .col-1 h3 {
     font-size: 16px;
-    color: darkblue;
+    color: rgb(44, 196, 216);
 }
 
 .col-1 p {
+    color: rgb(134, 223, 134);
     font-size: 18px;
 }
 
@@ -116,7 +123,6 @@
 
 #play-button:hover {
     padding-inline: 30px;
-    background: rgb(192, 255, 98);
     transition: all 0.2s;
 }
 
@@ -149,6 +155,7 @@
     display: flex;
     font-size: 14px;
     font-weight: bold;
+    color: white;
 }
 
 #scorecount {
